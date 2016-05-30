@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 
 public class BarController {
 	
-	Model model = new Model();
+	Model model ;
 	
 
     public void setModel(Model model) {
@@ -46,6 +46,7 @@ public class BarController {
 
     @FXML
     void doSimula(ActionEvent event) {
+    	this.txtResul.clear();
     	
     	String result = model.simula();
     	this.txtResul.appendText(result);

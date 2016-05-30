@@ -25,6 +25,7 @@ public class Model {
 	static String result="";
 
 	public String creaTavoli(int nPosti) {
+		
 		String sTavoli="";
 		this.numerotavoli++;
 		Tavolo tavolo = new Tavolo(nPosti,this.numerotavoli,true);
@@ -38,9 +39,12 @@ public class Model {
 	
 
 	public String simula() {
-		
+		coda.clear();
 		int lineaTempo=0;
-		// creazione 2000 Eventi arrivo
+		this.numeroBancone=0;
+		this.numeroInsoddisfatti=0;
+		this.numeroSoddisfatti=0;
+		// creazione 2000 Eventi a=0rrivo
 		for(int conta=0;conta<2000;conta++){
 		// random
 			Random random = new Random();
